@@ -13,7 +13,7 @@ int main(int argc, char **argv) {
     //       的张量占用的字节数
     int size = std::accumulate(shape, shape + 4, 1, [](int a, int b) {
         return a * b; 
-        }) * sizeof(float);
+    }) * sizeof(float);
     ASSERT(size == 602112, "4x1x3x224x224 = 602112");
     return 0;
 }
